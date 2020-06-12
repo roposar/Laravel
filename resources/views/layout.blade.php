@@ -7,17 +7,16 @@
     <title>
         @yield('title')
     </title>
+    <style>
+        .active a{
+           color: red;
+           text-decoration: none;
+        }
+    </style>
 </head>
 <body>
-    <nav>
-        <ul>
-            <li><a href="/">Home</a></li>
-            <li><a href="/about">Acerca de</a></li>
-            <li><a href="/portfolio">Portafolio</a></li>
-            <li><a href="/contact">Contacto</a></li>
-        </ul>
-    </nav>
 
+    @include('partials/nav')
     @yield('content')
 
 </body>
