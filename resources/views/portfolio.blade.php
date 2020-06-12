@@ -9,7 +9,7 @@
     <ul>
 
         @forelse ($portfolio as $portfolioItem)
-                <li> {{$portfolioItem['title']}} <small>{{ $loop->first ? 'Es el Primero' : '' }}</small>  </li>
+                <li> {{$portfolioItem['title']}} </li>
             @empty
 
                 <li>No hay proyectos para Mostrar</li>
