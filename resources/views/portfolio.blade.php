@@ -8,12 +8,13 @@
 
     <ul>
 
-        @forelse ($portfolio as $portfolioItem)
-                <li> {{$portfolioItem['title']}} </li>
+        @forelse ($projects as $project)
+                <li> {{$project->title }} </li>
             @empty
 
                 <li>No hay proyectos para Mostrar</li>
         @endforelse
+            {{ $projects->links()}}
     </ul>
 @endsection
 
