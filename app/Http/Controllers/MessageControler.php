@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Mail\MessageReceived;
 use Illuminate\Support\Facades\Mail;
-class MessagesControler extends Controller
+class MessageControler extends Controller
 {
     public function store()
     {
@@ -19,7 +19,7 @@ class MessagesControler extends Controller
 
         Mail::to('roposar@hotmail.com')->queue(new MessageReceived($message));
 
-        
+
         return 'Mensaje Enviado';
     }
 }

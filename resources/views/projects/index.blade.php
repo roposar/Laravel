@@ -9,7 +9,7 @@
     <ul>
 
         @forelse ($projects as $project)
-                <li> {{$project->title }} </li>
+                <li> <a href="{{ route('projects.show',$project) }}"> {{$project->title }}</a></li>
             @empty
 
                 <li>No hay proyectos para Mostrar</li>
@@ -17,4 +17,5 @@
             {{ $projects->links()}}
     </ul>
 @endsection
+
 
