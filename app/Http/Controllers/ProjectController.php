@@ -31,8 +31,15 @@ class ProjectController extends Controller
 
     public function store()
     {
+        $fields = request()->validate([
 
-        Project::create(request()->all());
+            'title' => 'required',
+            'url' => 'required',
+            'description' => 'required',
+
+        ]);
+
+        Project :: create( $fields );
 
         return redirect()->route('projects.index');
 
